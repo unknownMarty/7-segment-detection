@@ -1,0 +1,15 @@
+<html>
+<body>
+<image id="digit" width="305" height="585" 
+	style="display:block; margin-left:auto; margin-right:auto; border:50px solid white"/>
+<script>
+	window.onload = setImage(-1);
+	function setImage(prev) {
+		var next;
+		while((next = Math.floor(Math.random() * 9)) == prev);
+		document.getElementById("digit").src = next + ".PNG";
+		setTimeout(function(){ setImage(next); }, 5000);
+	}
+</script>
+</body>
+</html>
